@@ -19,7 +19,7 @@ import psutil
 from telethon import __version__, version
 from git import Repo
 
-from userbot import ALIVE_LOGO, ALIVE_NAME, CMD_HELP, StartTime, USERBOT_VERSION, bot
+from userbot import ALIVE_LOGO, ALIVE_NAME, CMD_HELP, StartTime, bot
 from userbot.events import register
 
 # ================= CONSTANT =================
@@ -226,14 +226,14 @@ async def pipcheck(pip):
 @register(outgoing=True, pattern=r"^.(alive|on)$")
 async def amireallyalive(alive):
     """ For .alive command, check if the bot is running.  """
-    uptime = await get_readable_time((time.time() - StartTime))
+    await get_readable_time((time.time() - StartTime))
     output = ("`AvariceAssistant is running...`\n"
-                     f"------------------------------------\n"
-                     f"•  User             : {DEFAULTUSER}\n"
-                     f"•  Python           : {python_version()}\n"
-                     f"•  Telethon version : {version.__version__}\n"
-                     f"------------------------------------\n"
-                     "`")
+              f"------------------------------------\n"
+              f"•  User             : {DEFAULTUSER}\n"
+              f"•  Python           : {python_version()}\n"
+              f"•  Telethon version : {version.__version__}\n"
+              f"------------------------------------\n"
+              "`")
     if ALIVE_LOGO:
         try:
             logo = ALIVE_LOGO
