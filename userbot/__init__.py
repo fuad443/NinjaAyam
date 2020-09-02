@@ -137,7 +137,7 @@ COUNTRY = str(os.environ.get("COUNTRY") or "")
 TZ_NUMBER = int(os.environ.get("TZ_NUMBER") or 1)
 
 # Version of One4uBot
-USERBOT_VERSION = os.environ.get("USERBOT_VERSION") or "3.6"
+USERBOT_VERSION = os.environ.get("USERBOT_VERSION") or "3.7"
 
 # User Terminal alias
 USER_TERM_ALIAS = os.environ.get("USER_TERM_ALIAS") or "One4uBot"
@@ -178,6 +178,10 @@ G_DRIVE_AUTH_TOKEN_DATA = os.environ.get("G_DRIVE_AUTH_TOKEN_DATA") or None
 G_DRIVE_FOLDER_ID = os.environ.get("G_DRIVE_FOLDER_ID") or None
 TEMP_DOWNLOAD_DIRECTORY = os.environ.get(
     "TMP_DOWNLOAD_DIRECTORY") or "./downloads"
+
+# Uptobox
+USR_TOKEN = os.environ.get("USR_TOKEN_UPTOBOX", None)
+
 
 # Setting Up CloudMail.ru and MEGA.nz extractor binaries,
 # and giving them correct perms to work properly.
